@@ -1,0 +1,82 @@
+body {
+  background-color: #f4f4f4;
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  margin-top: 2rem;
+}
+
+h1 {
+  color: #5d5d5d;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 2px #aaaaaa;
+}
+
+#prompt {
+  border-radius: 25px;
+  border: 2px solid #0056b3;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  border-radius: 25px;
+  padding: .5rem 1.5rem;
+  font-size: 1rem;
+  box-shadow: 2px 2px 5px #aaaaaa;
+}
+
+.btn-primary:hover {
+  background-color: #0069d9;
+}
+
+#generated-image {
+  margin-top: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 512px; /* 画像の幅を指定 */
+  height: 512px; /* 画像の高さを指定 */
+  object-fit: cover; /* 画像のアスペクト比を保ちつつ、指定された寸法にフィットさせる */
+}
+
+/* レスポンシブデザイン用のメディアクエリ */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  #prompt {
+    font-size: .8rem;
+  }
+
+  .btn-primary {
+    padding: .4rem 1rem;
+    font-size: .8rem;
+  }
+
+  #generated-image {
+    width: 100%; /* 画像の幅を画面幅に合わせる */
+    height: auto; /* 画像の高さを自動調整 */
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  .btn-primary {
+    font-size: .7rem;
+  }
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>お絵かきAIくん</title>
+    <!-- BootstrapのCSSを読み込む -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <!-- ここにカスタムCSSのリンクも追加できます -->
+    <link rel="stylesheet" href="static/css/custom.css" />
+    <style>
+      body {
+        background-color: #f8f9fa;
+      }
+      .container {
+        margin-top: 50px;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center">お絵かきAIくん</h1>
+      <p class="text-center">話題のDALL・E3が無料で試せます（1日5回まで）</p>
+      <p class="text-center">本サイトは、ChatGPTの指示のみで作成しています</p>
+      <!-- エラーメッセージがある場合に表示 -->
+      {% if error_message %}
+      <div class="alert alert-danger" role="alert">{{ error_message }}</div>
+      {% endif %}
+      <!-- 画像表示エリア -->
+      <div class="text-center">
+        {% if image_url %}
+        <!-- img-fluidクラスを追加してレスポンシブな画像に -->
+        <img
+          src="{{ image_url }}"
+          alt="Generated Image"
+          id="generated-image"
+          class="img-fluid"
+        />
+        {% else %}
+        <!-- 表示されていないときもレスポンシブ対応を保持 -->
+        <img
+          src=""
+          alt="Generated Image"
+          id="generated-image"
+          class="img-fluid"
+          style="display: none"
+        />
+        {% endif %}
+      </div>
+      <!-- プロンプト入力フォーム -->
+      <form method="post" class="mt-4">
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            id="prompt"
+            name="prompt"
+            placeholder="描いて欲しいものを入力してください"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">
+          画像生成
+        </button>
+      </form>
+    </div>
+    <!-- BootstrapのJavaScriptと依存関係を読み込む -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
