@@ -22,7 +22,7 @@ def index():
         if 'request_count' not in session:
             session['request_count'] = 0
         print(session['request_count'])
-        if session['request_count'] < 15:
+        if session['request_count'] < 5:
             session['request_count'] += 1
             session.permanent = True  # セッションの有効期限をリセット
             prompt = request.form['prompt']
