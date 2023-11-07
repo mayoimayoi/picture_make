@@ -1,6 +1,6 @@
 body {
   background-color: #f4f4f4;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 .container {
@@ -23,12 +23,15 @@ h1 {
 }
 
 .btn-primary {
+  width: 50%;
+  padding: 10px 0px; /* パディングを小さくする */
+  font-size: 1rem; /* フォントサイズを小さくする */
   background-color: #007bff;
   border: none;
   border-radius: 25px;
-  padding: .5rem 1.5rem;
-  font-size: 1rem;
-  box-shadow: 2px 2px 5px #aaaaaa;
+  box-shadow: 2px 2px 5px #d4b7b7;
+  display: block; /* ブロックレベル要素として扱う */
+  margin: 0 auto; /* 上下のマージンは0、左右のマージンは自動で中央揃え */
 }
 
 .btn-primary:hover {
@@ -57,12 +60,12 @@ h1 {
   }
 
   #prompt {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 
   .btn-primary {
-    padding: .4rem 1rem;
-    font-size: .8rem;
+    padding: 0.4rem 1rem;
+    font-size: 0.8rem;
   }
 
   #generated-image {
@@ -77,6 +80,6 @@ h1 {
   }
 
   .btn-primary {
-    font-size: .7rem;
+    font-size: 0.7rem;
   }
 }

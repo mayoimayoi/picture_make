@@ -28,7 +28,7 @@
     <div class="container">
       <h1 class="text-center">お絵かきAIくん</h1>
       <p class="text-center">話題のDALL・E3が無料で試せます（1日5回まで）</p>
-      <p class="text-center">本サイトは、ChatGPTの指示のみで作成しています</p>
+      <p class="text-center">※本サイトは、ChatGPTの指示のみで作成しています</p>
       <!-- エラーメッセージがある場合に表示 -->
       {% if error_message %}
       <div class="alert alert-danger" role="alert">{{ error_message }}</div>
@@ -70,6 +70,25 @@
           画像生成
         </button>
       </form>
+      <div class="mt-5">
+        <p class="text-center">
+          ↓下の本を読めば、PythonでChatGPTのアプリが簡単に作れます↓
+        </p>
+        <div style="text-align: center; margin-top: 20px">
+          <a
+            href="https://www.amazon.co.jp/dp/B0BXQNTBJX"
+            target="_blank"
+            style="display: inline-block"
+          >
+            <p>Pythonで作るChatGPTアプリ入門：99円（Kindle）</p>
+            <img
+              src="static/img/test.jpg"
+              alt="PythonでChatGPTのアプリが作れる本"
+              style="height: 200px; display: block; margin: 0px auto"
+            />
+          </a>
+        </div>
+      </div>
     </div>
     <!-- BootstrapのJavaScriptと依存関係を読み込む -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
